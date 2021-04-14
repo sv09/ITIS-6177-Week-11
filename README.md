@@ -28,14 +28,19 @@ You can also run `node .` to skip the build step.
 
 Open http://127.0.0.1:3000 in your browser.
 
-currently starts using pm2 start
+currently starts using 'pm2 start'
+
 To change back to npm start, make the following changes:
+
 In package.json:
+
   Remove lines
   "start": "pm2 start ecosystem.config.js --env production",
+  
   "stop": "pm2 stop ecosystem.config.js --env production",
 
   Replace with:
+  
   "start": "node -r source-map-support/register .",
 
 
